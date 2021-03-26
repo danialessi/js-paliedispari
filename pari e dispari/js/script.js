@@ -12,7 +12,7 @@ console.log(numeroUtente);
 
 // Definisco la funzione per scegliere un numero random
 function randomNumber(min, max) {
-    return Math.floor(Math.random() * 5) + 1;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 var numeroRandom = randomNumber(1, 5);
@@ -22,12 +22,20 @@ console.log(numeroRandom);
  var somma = numeroRandom + numeroUtente;
 //  console.log(somma);
 
+// stabilire se la somma è pari o dispari 
+var sommaPariODispari == verificaPariDispari(somma);
+
 //  Funzione per stabilire se la somma è pari o dispari 
-function verifica(dato1) {
-    if (somma == (somma % 2 ==0)) {
-        console.log("pari");
+// mi serve un numero da valutare 
+// deve tornare una stringa "pari" se è pari, "dispari" se è dispari 
+function verificaPariDispari(numeroDaValutare) {
+
+    var risultato;
+
+    if (numeroDaValutare % 2 == 0) {
+        risultato = "pari"
     } else {
-        console.log("dispari")
+        risultato = "dispari"
     }
 
     return risultato;
